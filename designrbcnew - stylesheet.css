@@ -21,7 +21,9 @@ a {
 }
 
 .btn-primary {
-	padding:12px 16px;
+	xpadding:12px 16px;
+	padding-right:28px;
+	background:url(|IMAGESRC|/shop_now_chevron.png) 89% center no-repeat;	
 }
 
 /* If we use a glyphicon:
@@ -687,10 +689,8 @@ nav .form-control {
 
 #hiw_home {
 	padding-bottom:30px;
-}
-
-#hiw_home .col-md-12 .col-md-4 {
-	padding-right:
+	background-color:#ffe13c;
+	color:#002888;
 }
 
 #hiw_home .media-left {
@@ -793,7 +793,6 @@ nav .form-control {
 	padding: 25px;
 	margin: 10px 5px 0px;
 	display: inline-block;
-	min-height: 375px;
 	vertical-align: top;
 	border:1px solid #CCC;
 	min-height:387px;
@@ -1121,4 +1120,58 @@ footer {
 	background-color:#CCC;
 	padding:20px;
 	margin-top:20px;
+}
+
+@media screen and (min-width:769px) {
+	footer {
+		font-size:12px;
+		border-top:1px solid #cbc19b;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f2efe3+100 */
+
+	background: rgb(255,255,255); /* Old browsers */
+	
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(242,239,227,1) 100%); /* FF3.6+ */
+	
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(242,239,227,1))); /* Chrome,Safari4+ */
+	
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(242,239,227,1) 100%); /* Chrome10+,Safari5.1+ */
+	
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(242,239,227,1) 100%); /* Opera 11.10+ */
+	
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(242,239,227,1) 100%); /* IE10+ */
+	
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(242,239,227,1) 100%); /* W3C */
+	
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2efe3',GradientType=0 ); /* IE6-9 */
+	padding:0px 10px 0px 20px;
+	}
+	
+	footer ul.col-md-3 {
+		border-left:1px dotted 	#cbc19b;
+		height:151px;
+		margin-bottom:0px;
+	}
+	
+	footer ul.col-md-3:first-child {
+		border:none;	
+	}
+	
+	footer ul.col-md-3 li a:before {
+		content: "\e072";
+		font-family: "Glyphicons Halflings";
+		line-height: 1;
+		display: inline-block;
+		font-size: 8px;
+		color:#002888;
+		padding-right:9px;	
+	}
+	
+	#sub_footer {
+		background:#FFF;
+		margin-left:-5px;
+		margin-right:-5px;	
+		padding:12px;
+	}
+		
+	}
 }
