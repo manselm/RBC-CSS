@@ -15,15 +15,25 @@ a {
 }
 
 .btn {
-	background-color:#103a9c !important;
-	border-color:#103a9c !important;
-	border-radius:0px !important;
+	
+}
+
+#FR .btn-primary {
+	width:113px;
+	white-space:normal;
+	text-align:center;	
+}
+
+#FR .btn-primary.btn-lg {
+	width:auto;	
 }
 
 .btn-primary {
-	xpadding:12px 16px;
 	padding-right:28px;
-	background:url(|IMAGESRC|/shop_now_chevron.png) 92% center no-repeat;	
+	background:url(|IMAGESRC|/shop_now_chevron.png) 92% center no-repeat;
+	background-color:#103a9c !important;
+	border-color:#103a9c !important;
+	border-radius:0px !important;	
 }
 
 /* If we use a glyphicon:
@@ -51,6 +61,7 @@ span.percent_amt {
 
 span.currency {
 	font-weight:bold;
+	color:black;
 }
 
 /* Product Images */
@@ -77,7 +88,8 @@ a.offer-imageLink {
 .center {
 	height:100%;
 	width:100%;
-	display:table;	
+	display:table;
+	margin-bottom:8px;	
 }
 
 .center .v-align {
@@ -121,8 +133,9 @@ a.offer-imageLink {
 }
 
 #home_main span.percent_amt {
-	margin-top:10px;
-	margin-bottom:15px;
+	margin-top:30px;
+	margin-bottom:30px;
+	color:#888888;
 }
 
 /* Page Headings */
@@ -243,7 +256,7 @@ nav #navbar .navbar-form {
 }
 
 nav .form-control {
-	height:32px;	
+	height:34px;	
 }
 
 .input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:first-child>.btn-group:not(:first-child)>.btn, .input-group-btn:first-child>.btn:not(:first-child), .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group>.btn, .input-group-btn:last-child>.dropdown-toggle {
@@ -274,9 +287,13 @@ nav .form-control {
 	vertical-align:text-top !important;	
 }
 
-.dropdown-menu>li>a, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+nav .dropdown-menu>li>a, nav .dropdown-menu>li>a:focus, nav .dropdown-menu>li>a:hover {
 	background-color:#103a9c;
 	color:#FFF;
+}
+
+nav #navbar .input-group-btn {
+	vertical-align:bottom;
 }
 
 /* Main Nav Dropdown */
@@ -688,13 +705,96 @@ nav .form-control {
 /* Home HIW */
 
 #hiw_home {
-	padding-bottom:30px;
-	background-color:#ffe13c;
-	color:#002888;
+	background:	#fde700;
+	color:#103a9c;
 }
 
-#hiw_home .media-left {
+#hiw_home .col-md-4 {
+	margin-bottom:30px;
+}	
+
+.hiw_section {
+	padding-bottom:30px;
+}
+
+.hiw_section h2 {
+	margin:46px 0px;	
+	font-size:27px;
+}
+
+.hiw_section .col-md-12 .col-md-4 {
+	margin:30px 0px;	
+}
+
+.hiw_section .media-left {
 	padding-right:15px;
+}
+
+.hiw_section .panel {
+	border:none;	
+	box-shadow:none;
+	-webkit-box-shadow:none;
+}
+
+.hiw_section .panel-default>.panel-heading {
+	background:none;	
+}
+
+.hiw_section .panel-default>.panel-heading+.panel-collapse>.panel-body {
+	border:none;
+}
+
+.faq-container .panel-title a:before {
+	content:"\2212";
+    font-family: "Glyphicons Halflings";
+    line-height: 1;
+    display: inline-block;
+    font-size: 11px;
+	margin-right:20px;	
+}
+
+.faq-container .panel-title a.collapsed:before {
+	content: "\2b";
+}
+
+.faq-container .panel-title a {
+	color:black;
+	font-weight:bold;
+}
+
+.faq-container .panel-title a.collapsed {
+	font-weight:normal;	
+	color:#103a9c;
+	text-decoration:underline;
+}
+
+.faq-container .panel-body {
+	padding-left:52px;	
+}
+
+/* Toggle Buttons */
+
+.toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20px; }
+.toggle.ios .toggle-handle { 
+	border-radius: 20px;
+	height:28px;
+	width:30px;
+	top:2px;
+}
+div.off .toggle-handle {
+	left:17px;	
+}
+
+div .toggle-handle {
+	right:17px;
+}
+.toggle-on.btn,
+.toggle-off.btn {
+	color:black;
+	background:#cccccc;
+	border-color:#cccccc !important;
+	-webkit-box-shadow:none;
+	box-shadow:none;
 }
 
 /* View Mode Switch */
@@ -777,7 +877,7 @@ nav .form-control {
 }
 
 .cbp-vm-price {
-	color: #000;
+	color: #888888;
 }
 
 /* Individual view mode styles */
@@ -790,12 +890,16 @@ nav .form-control {
 .cbp-vm-view-grid ul#offers li {
 	width: 32%;
 	text-align: center;
-	padding: 25px;
+	padding:17px 25px;
 	margin: 10px 5px 0px;
 	display: inline-block;
 	vertical-align: top;
 	border:1px solid #CCC;
-	min-height:387px;
+	max-width:236px;
+}
+
+#EN .cbp-vm-view-grid ul#offers li {
+	min-height:286px;
 }
 
 .cbp-vm-view-grid .cbp-vm-image {
@@ -807,6 +911,11 @@ nav .form-control {
 	xfont-weight:bold;
 }
 
+.cbp-vm-view-grid ul#offers li .see_details {
+	display:block;
+	margin:7px 0px 33px;
+}
+
 .cbp-vm-view-grid .cbp-vm-details {
 	max-width: 300px;
 	min-height: 35px;
@@ -814,7 +923,7 @@ nav .form-control {
 }
 
 .cbp-vm-view-grid .cbp-vm-price {
-	margin: 10px 0;
+	margin: 10px 0 30px;
 	xfont-size: 1.5em;
 }
 
@@ -863,8 +972,16 @@ nav .form-control {
 }
 
 .cbp-vm-view-list .cbp-vm-price {
-	font-size: 1.3em;
+	xfont-size: 1.3em;
 	width: 42.5%;
+}
+
+.cbp-vm-view-list .cbp-vm-price br {
+	display:none;	
+}
+
+.cbp-vm-view-list .cbp-vm-price .currency {
+	margin-right:6px;	
 }
 
 .cbp-vm-view-list.product .cbp-vm-price {
@@ -1116,73 +1233,217 @@ table#offer_table td {
 	font-weight:bold;
 }
 
+/* Footer */
+
 footer {
-	background-color:#CCC;
-	padding:20px;
-	margin-top:20px;
+		xfont-size:12px;
+	}
+	
+footer h4 {
+	font-size:0.857em;	
+	font-weight:bold;
+}
+	
+footer ul.col-md-3 li a,
+.navmenu-nav.dropdown-menu li a  {
+	background:url(|IMAGESRC|/newwindow.png) center right no-repeat;
+	padding-right:25px;	
+}
+
+footer ul.col-md-3 li a:before,
+.navmenu-nav.dropdown-menu li a:before {
+	content: "\e072";
+	font-family: "Glyphicons Halflings";
+	line-height: 1;
+	display: inline-block;
+	font-size: 8px;
+	color:#002888;
+	padding-right:9px;	
+}
+
+footer .col-md-4.text-right a .glyphicon {
+	background-color: #002888;
+    padding: 8px;
+    border-radius: 20px;
+    margin-left: 10px;
+	color:white;
+}
+
+#sub_footer a.lang {
+	text-decoration:none;
+}
+
+#sub_footer a.lang.active {
+	color:#CCC;	
+}
+
+#sub_footer {
+	font-size:0.786em;
+}
+
+#sub_footer a {
+	text-decoration:underline;	
+}
+
+#sub_footer .list-inline>li {
+	padding-right:2.5px;
+	padding-left:2.5px;	
+}
+	
+
+/* ---- MOBILE ---- */
+
+@media screen and (max-width:768px) {
+footer {
+	background-color:#FFF;
+}
+
+footer ul li {
+	line-height:3;
+	margin-left:-20px;
+	margin-right:-20px;	
+	border-bottom:1px solid #d5ccaf;	
+}
+
+footer .navmenu-nav.dropdown-menu {
+	margin-bottom:0px;
+	padding-bottom:0px;	
+}
+
+#footer_dropdowns li {
+	background:#e9e4d2;	
+}
+
+#footer_dropdowns liLfirst-child {
+	border-top:1px solid #d5ccaf;		
+}
+
+#footer_dropdowns li.open .navmenu-nav li:first-child {
+	border-top:1px solid #d5ccaf;		
+}
+
+#footer_dropdowns li.open {
+	background:#E2DFD1;
+}
+
+#footer_dropdowns li.open .navmenu-nav li {
+	background:#f0eee2;
+}
+
+.navmenu-nav.dropdown-menu li a {
+	display:inline;
+	white-space:normal;	
+}
+
+footer .navmenu-nav.dropdown-menu li:last-child {
+	border:none;	
+}
+
+footer .dropdown .btn-link {
+	color:black;
+	font-weight:bold;	
+}
+
+footer .dropdown .btn-link:hover,
+footer .dropdown .btn-link:focus {
+	text-decoration:none;	
+}
+
+footer .dropdown .btn-link:before {
+	content: "\2b";
+	font-family: "Glyphicons Halflings";
+	line-height: 1;
+	display: inline-block;
+	font-size: 12px;
+	color:black;
+	padding-right:9px;	
+}
+
+footer .dropdown.open .btn-link:before {
+	content: "\2212";
+}
+
+footer .dropdown .dropdown-menu li {
+	margin-left:0px;
+	margin-right:0px;	
+}
+
+#sub_footer ul li a {
+	text-decoration:underline;
+	padding-left:15px;
+}
+
+#sub_footer ul li {
+	display:block;
+}
+#sub_footer p.visible-xs {
+	font-size:0.857em;
+}
+
+#sub_footer ul li.divider {
+	display:none;	
+}
+
+#sub_footer ul li:last-child div.visible-xs {
+	margin:5px 0px 5px 15px;	
+}
+
 }
 
 @media screen and (min-width:769px) {
-	footer {
-		font-size:12px;
+	footer>.row {
+		margin-left:-20px;
+		margin-right:-20px;	
+	}
+	
+	footer #top_footer {
 		border-top:1px solid #cbc19b;
 		border-bottom:1px solid #FFF;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f2efe3+100 */
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f2efe3+100 */
 
-	background: rgb(255,255,255); /* Old browsers */
-	
-	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(242,239,227,1) 100%); /* FF3.6+ */
-	
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(242,239,227,1))); /* Chrome,Safari4+ */
-	
-	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(242,239,227,1) 100%); /* Chrome10+,Safari5.1+ */
-	
-	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(242,239,227,1) 100%); /* Opera 11.10+ */
-	
-	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(242,239,227,1) 100%); /* IE10+ */
-	
-	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(242,239,227,1) 100%); /* W3C */
-	
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2efe3',GradientType=0 ); /* IE6-9 */
-	xpadding:0px 10px 0px 20px;
+		background: rgb(255,255,255); /* Old browsers */
+		
+		background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(242,239,227,1) 100%); /* FF3.6+ */
+		
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(242,239,227,1))); /* Chrome,Safari4+ */
+		
+		background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(242,239,227,1) 100%); /* Chrome10+,Safari5.1+ */
+		
+		background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(242,239,227,1) 100%); /* Opera 11.10+ */
+		
+		background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(242,239,227,1) 100%); /* IE10+ */
+		
+		background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(242,239,227,1) 100%); /* W3C */
+		
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2efe3',GradientType=0 ); /* IE6-9 */
+		xpadding:0px 10px 0px 20px;	
 	}
 	
 	footer ul.col-md-3 {
 		border-left:1px dotted 	#cbc19b;
-		height:151px;
+		min-height:151px;
+		padding-bottom:18px;
 		margin-bottom:0px;
+	}
+	
+	#FR ul.col-md-3 {
+		min-height:177px;	
 	}
 	
 	footer ul.col-md-3:first-child {
 		border:none;	
 	}
 	
-	footer ul.col-md-3 li a  {
-		background:url(|IMAGESRC|/newwindow.png) center right no-repeat;
-		padding-right:25px;	
-	}
-	
-	footer ul.col-md-3 li a:before {
-		content: "\e072";
-		font-family: "Glyphicons Halflings";
-		line-height: 1;
-		display: inline-block;
-		font-size: 8px;
-		color:#002888;
-		padding-right:9px;	
+	#top_footer a {
+		font-size:0.786em;
 	}
 	
 	#sub_footer {
 		background:#FFF;
-		margin-left:-5px;
-		margin-right:-5px;	
+		xmargin-left:-5px;
+		xmargin-right:-5px;	
 		padding:12px;
 		border-top: 1px solid #cbc19b;
 	}
 	
-	#sub_footer ul li a {
-		text-decoration:underline;	
-	}
-		
-	}
 }
