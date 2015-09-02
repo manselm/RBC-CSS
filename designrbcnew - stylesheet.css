@@ -10,8 +10,12 @@ a {
 	color:#103a9c;
 }
 
+h1 {
+	font-size:1.929em;	
+}
+
 .h2, h2 {
-	font-size:22px;
+	font-size:1.571em;
 }
 
 .btn {
@@ -147,13 +151,9 @@ a.offer-imageLink {
 
 .page-header h1 {
 	margin:0px 0px 15px 0px;
-	padding-left:190px;
-	padding-top:70px;
-	background:url(|IMAGESRC|/category_FPO.png) no-repeat 0px 0px;
-}
-
-.page-header .cbp-vm-options {
-	margin-top:25px;
+	xpadding-left:190px;
+	xpadding-top:70px;
+	xbackground:url(|IMAGESRC|/category_FPO.png) no-repeat 0px 0px;
 }
 
 @media (min-width: 1200px) {
@@ -173,6 +173,11 @@ a.offer-imageLink {
 
 .offcanvas .nav>li {
 	border-bottom:1px solid #354572;	
+}
+
+.offcanvas .nav>li:first-child>a:hover,
+.offcanvas .nav>li:first-child>a:focus {
+	color:#FFF;	
 }
 
 .offcanvas .nav>li:first-child>a,
@@ -294,6 +299,48 @@ nav .dropdown-menu>li>a, nav .dropdown-menu>li>a:focus, nav .dropdown-menu>li>a:
 
 nav #navbar .input-group-btn {
 	vertical-align:bottom;
+}
+
+/* Autocomplete */
+
+.tt-query {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+  color: #999
+}
+
+.tt-menu {    // used to be tt-dropdown-menu in older versions
+  width: 422px;
+  margin-top: 4px;
+  padding: 4px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 0px;
+     -moz-border-radius: 0px;
+          border-radius: 0px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.tt-suggestion {
+  padding: 3px 20px;
+  line-height: 24px;
+}
+
+.tt-suggestion.tt-cursor {
+  color: #fff;
+  background-color: #103a9c;
+
+}
+
+.tt-suggestion p {
+  margin: 0;
 }
 
 /* Main Nav Dropdown */
@@ -797,6 +844,12 @@ div .toggle-handle {
 	box-shadow:none;
 }
 
+/*Sort by Dropwndown*/
+
+.btn-default.dropdown-toggle {
+	border-radius:0px;
+}
+
 /* View Mode Switch */
 
 /* Main container */
@@ -818,13 +871,14 @@ div .toggle-handle {
 	xheight: 40px;
 	overflow: hidden;
 	white-space: nowrap;
-	color: #d0d0d0;
+	color: #ababab;
 	margin: 2px;
+	text-decoration:underline;
 }
 
 .cbp-vm-options a:hover,
 .cbp-vm-options a.cbp-vm-selected {
-	color: #47a3da;
+	color: #103a9c;
 }
 
 .cbp-vm-options a:before {
@@ -1071,74 +1125,6 @@ div .toggle-handle {
 	}
 }
 
-@media (max-width: 767px) {
-	/* Nav */
-	
-	.navbar-header {
-		background:#002888;
-	}
-	.navbar-toggle {
-		margin:10px 0px 0px 0px;
-		border:none;
-	}
-	.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
-		background:#002888;
-	}
-	.navbar-default .navbar-toggle .icon-bar {
-		background-color:#FFF;
-		width:19px;	
-	}
-	.navbar-header .form-group {
-		margin:10px 0px;	
-	}
-	
-	
-	.dropdown-menu.multi-column {
-		min-width: 240px !important;
-		overflow-x: hidden;
-	}
-	/* Product Media Queries */
-	.cbp-vm-view-list.product .cbp-vm-title {
-	width:70%;
-}
-	.cbp-vm-view-list #product_list .cbp-vm-image {
-		width:auto;
-	}
-	.cbp-vm-view-list #product_list .cbp-vm-title p {
-		margin-bottom:5px;
-	}
-
-	.cbp-vm-view-list #product_list .cbp-vm-price
-	 {
-		display:none;
-	}
-	.cbp-vm-view-list #product_list .list_mobile {
-		display:block;
-	}
-	.cbp-vm-view-grid #product_list .list_mobile {
-		display:none;
-	}
-
-	.cbp-vm-view-list #product_list a.btn {
-		display:none;
-	}
-	.cbp-vm-view-list #product_list .cbp-vm-details a.btn {
-		display:inline-block;
-	}
-	.cbp-vm-view-list #product_list .cbp-vm-details {
-		padding-right:0px;
-	}
-	.cbp-vm-view-list #product_list .cbp-vm-details .offer_amt {
-		display:inline-block;
-		padding:0px 10px 0px 8px;
-	}
-	#product_list {
-		padding-left:0px;
-		padding-right:10px;
-	}
-
-}
-
 /* Modals */
 
 .modal-header {
@@ -1161,29 +1147,6 @@ div .toggle-handle {
 }
 }
 
-
-
-@media (min-width: 768px) {
-#search {
-	width:250px;
-}
-#top_ten .col-md-2 {
-	width:20%
-}
-#logo {
-	float:left;
-}
-.product.cbp-vm-view-grid ul#offers li {
-	width:31%;
-	padding:15px;
-	height:440px;
-}
-
-#product_list .list_mobile {
-		display:none;
-	}
-
-}
 
 #pagination {
 	background-color:#dadada;
@@ -1290,10 +1253,208 @@ footer .col-md-4.text-right a .glyphicon {
 	padding-left:2.5px;	
 }
 	
+@media screen and (min-width:769px) {
+	
+.page-header .cbp-vm-options {
+	margin-top:25px;
+}
+#search {
+	width:250px;
+}
+#top_ten .col-md-2 {
+	width:20%
+}
+#logo {
+	float:left;
+}
+/* Auto Suggest */
+
+.tt-suggestion {
+	width:190px;	
+}
+.product.cbp-vm-view-grid ul#offers li {
+	width:31%;
+	padding:15px;
+	height:440px;
+}
+
+#product_list .list_mobile {
+		display:none;
+	}
+	#home_main footer>.row {
+		margin-left:-20px;
+		margin-right:-20px;	
+	}
+	
+	footer #top_footer {
+		border-top:1px solid #cbc19b;
+		border-bottom:1px solid #FFF;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f2efe3+100 */
+
+		background: rgb(255,255,255); /* Old browsers */
+		
+		background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(242,239,227,1) 100%); /* FF3.6+ */
+		
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(242,239,227,1))); /* Chrome,Safari4+ */
+		
+		background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(242,239,227,1) 100%); /* Chrome10+,Safari5.1+ */
+		
+		background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(242,239,227,1) 100%); /* Opera 11.10+ */
+		
+		background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(242,239,227,1) 100%); /* IE10+ */
+		
+		background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(242,239,227,1) 100%); /* W3C */
+		
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2efe3',GradientType=0 ); /* IE6-9 */
+		xpadding:0px 10px 0px 20px;	
+	}
+	
+	footer ul.col-md-3 {
+		border-left:1px dotted 	#cbc19b;
+		min-height:151px;
+		padding-bottom:18px;
+		margin-bottom:0px;
+	}
+	
+	#FR ul.col-md-3 {
+		min-height:177px;	
+	}
+	
+	footer ul.col-md-3:first-child {
+		border:none;	
+	}
+	
+	#top_footer a {
+		font-size:0.786em;
+	}
+	
+	#sub_footer {
+		background:#FFF;
+		xmargin-left:-5px;
+		xmargin-right:-5px;	
+		padding:12px;
+		border-top: 1px solid #cbc19b;
+	}
+	
+}
 
 /* ---- MOBILE ---- */
 
 @media screen and (max-width:768px) {
+	h1 {
+		font-size:1.286em;	
+		color:#103a9c;
+	}
+	
+	#main_content {
+		margin-top:20px;	
+	}
+	
+	.twitter-typeahead {
+		vertical-align:bottom !important;	
+	}
+	.tt-suggestion {
+		width:160px;	
+	}
+	
+	/* Page Headers */
+	.page-header img {
+		margin:0px auto;	
+	}
+	.page-header .col-xs-6.visible-xs {
+		padding-left:5px;
+		padding-right:2.5px;	
+		width:45%;
+	}
+	
+	.page-header .col-xs-6.cbp-vm-options {
+		padding-left:2.5px;
+		padding-right:5px;	
+		width:55%;
+	}
+	#FR .page-header .col-xs-6.cbp-vm-options {
+		width:100%;
+		padding-left:10px;	
+	}
+	
+	#FR .page-header .col-xs-6.cbp-vm-options .results_filter {
+		margin-top:15px;
+		float:left;	
+	}
+	/* Nav */
+	
+	.navbar-header {
+		background:#002888;
+	}
+	.navbar-toggle {
+		margin:10px 0px 0px 0px;
+		border:none;
+	}
+	.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+		background:#002888;
+	}
+	.navbar-default .navbar-toggle .icon-bar {
+		background-color:#FFF;
+		width:19px;	
+	}
+	.navbar-header .form-group {
+		margin:10px 0px;	
+	}
+	
+	
+	.dropdown-menu.multi-column {
+		min-width: 240px !important;
+		overflow-x: hidden;
+	}
+	/* Product Media Queries */
+	.cbp-vm-view-list.product .cbp-vm-title {
+	width:70%;
+}
+	.cbp-vm-view-list #product_list .cbp-vm-image {
+		width:auto;
+	}
+	.cbp-vm-view-list #product_list .cbp-vm-title p {
+		margin-bottom:5px;
+	}
+
+	.cbp-vm-view-list #product_list .cbp-vm-price
+	 {
+		display:none;
+	}
+	.cbp-vm-view-list #product_list .list_mobile {
+		display:block;
+	}
+	.cbp-vm-view-grid #product_list .list_mobile {
+		display:none;
+	}
+
+	.cbp-vm-view-list #product_list a.btn {
+		display:none;
+	}
+	.cbp-vm-view-list #product_list .cbp-vm-details a.btn {
+		display:inline-block;
+	}
+	.cbp-vm-view-list #product_list .cbp-vm-details {
+		padding-right:0px;
+	}
+	.cbp-vm-view-list #product_list .cbp-vm-details .offer_amt {
+		display:inline-block;
+		padding:0px 10px 0px 8px;
+	}
+	#product_list {
+		padding-left:0px;
+		padding-right:10px;
+	}
+	/* Offer Table - List */
+	
+	.cbp-vm-view-list ul#offers li {
+		padding-left:25px;
+		padding-right:25px;
+		margin-left:-25px;
+		margin-right:-25px;	
+	}
+	
+	
 footer {
 	background-color:#FFF;
 }
@@ -1301,7 +1462,7 @@ footer {
 footer ul li {
 	line-height:3;
 	margin-left:-20px;
-	margin-right:-20px;	
+	margin-right:-15px;	
 	border-bottom:1px solid #d5ccaf;	
 }
 
@@ -1386,66 +1547,8 @@ footer .dropdown .dropdown-menu li {
 	display:none;	
 }
 
-#sub_footer ul li:last-child div.visible-xs {
+#sub_footer ul li:last-child.visible-xs>div {
 	margin:5px 0px 5px 15px;	
 }
 
-}
-
-@media screen and (min-width:769px) {
-	footer>.row {
-		margin-left:-20px;
-		margin-right:-20px;	
-	}
-	
-	footer #top_footer {
-		border-top:1px solid #cbc19b;
-		border-bottom:1px solid #FFF;
-		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f2efe3+100 */
-
-		background: rgb(255,255,255); /* Old browsers */
-		
-		background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(242,239,227,1) 100%); /* FF3.6+ */
-		
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(242,239,227,1))); /* Chrome,Safari4+ */
-		
-		background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(242,239,227,1) 100%); /* Chrome10+,Safari5.1+ */
-		
-		background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(242,239,227,1) 100%); /* Opera 11.10+ */
-		
-		background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(242,239,227,1) 100%); /* IE10+ */
-		
-		background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(242,239,227,1) 100%); /* W3C */
-		
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2efe3',GradientType=0 ); /* IE6-9 */
-		xpadding:0px 10px 0px 20px;	
-	}
-	
-	footer ul.col-md-3 {
-		border-left:1px dotted 	#cbc19b;
-		min-height:151px;
-		padding-bottom:18px;
-		margin-bottom:0px;
-	}
-	
-	#FR ul.col-md-3 {
-		min-height:177px;	
-	}
-	
-	footer ul.col-md-3:first-child {
-		border:none;	
-	}
-	
-	#top_footer a {
-		font-size:0.786em;
-	}
-	
-	#sub_footer {
-		background:#FFF;
-		xmargin-left:-5px;
-		xmargin-right:-5px;	
-		padding:12px;
-		border-top: 1px solid #cbc19b;
-	}
-	
 }
