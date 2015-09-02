@@ -814,7 +814,7 @@ div .toggle-handle {
 
 .cbp-vm-options a {
 	display: inline-block;
-	width: 70px;
+	xwidth: 70px;
 	xheight: 40px;
 	overflow: hidden;
 	white-space: nowrap;
@@ -1331,8 +1331,10 @@ footer .navmenu-nav.dropdown-menu {
 }
 
 .navmenu-nav.dropdown-menu li a {
-	display:inline;
-	white-space:normal;	
+	display:inline-block;
+	white-space:normal;
+	position:relative;
+	z-index:999999;	
 }
 
 footer .navmenu-nav.dropdown-menu li:last-child {
