@@ -11,7 +11,8 @@ a {
 }
 
 h1 {
-	font-size:1.929em;	
+	font-size:1.929em;
+	color:#103a9c	
 }
 
 .h2, h2 {
@@ -90,7 +91,7 @@ a.offer-imageLink {
 }
 
 .center {
-	height:100%;
+	height:60px;
 	width:100%;
 	display:table;
 	margin-bottom:8px;	
@@ -145,8 +146,10 @@ a.offer-imageLink {
 /* Page Headings */
 
 .page-header {
-	margin-top:0px;
-	border-bottom:2px solid yellow;
+	border-bottom-style:double;
+	border-bottom-width:4px;
+	border-bottom-color:#fde700;
+	margin:0px 0px 10px
 }
 
 .page-header h1 {
@@ -895,7 +898,7 @@ div .toggle-handle {
 .cbp-vm-switcher ul#offers {
 	list-style: none;
 	padding: 0;
-	margin: 0;
+	margin: 0px -25px;
 }
 
 /* Clear eventual floats */
@@ -921,7 +924,7 @@ div .toggle-handle {
 
 .cbp-vm-image img {
 	display: inline-block;
-	max-width: 100%;
+	max-width: 120px;
 }
 
 .cbp-vm-title {
@@ -942,14 +945,13 @@ div .toggle-handle {
 }
 
 .cbp-vm-view-grid ul#offers li {
-	width: 32%;
+	width: 23%;
 	text-align: center;
 	padding:17px 25px;
 	margin: 10px 5px 0px;
 	display: inline-block;
 	vertical-align: top;
 	border:1px solid #CCC;
-	max-width:236px;
 }
 
 #EN .cbp-vm-view-grid ul#offers li {
@@ -958,6 +960,19 @@ div .toggle-handle {
 
 .cbp-vm-view-grid .cbp-vm-image {
 	margin-bottom:15px;
+	display:table;
+	height:60px;
+}
+
+.cbp-vm-view-grid .cbp-vm-image img {
+	display: table-cell;
+	vertical-align:middle;	
+}
+
+.cbp-vm-title {
+	margin: 0;
+	padding: 0;
+	font-weight:normal;
 }
 
 .cbp-vm-view-grid .cbp-vm-title {
@@ -1166,6 +1181,10 @@ div .toggle-handle {
 	margin-bottom:70px;
 }
 
+#EN #top_ten .col-md-12 .col-md-2 {
+	height:245px;
+}
+
 #main_content {
 	padding-top:25px;
 	-webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.35);
@@ -1252,11 +1271,32 @@ footer .col-md-4.text-right a .glyphicon {
 	padding-right:2.5px;
 	padding-left:2.5px;	
 }
+
+@media screen and (max-width:1169px) {
+	#main_content,
+	.navbar-default .container {
+		width:100% !important;	
+	}
+}
 	
 @media screen and (min-width:769px) {
+
+.page-header h1 {
+	xclear:both;	
+	display:inline-block;
+	vertical-align:bottom;
+	margin:0px 0px 15px 0px;
+	width:auto;
+	float:none;
+}
+.page-header img {
+ 	width:190px;
+	display:inline-block;
+ }
 	
 .page-header .cbp-vm-options {
 	margin-top:25px;
+	float:right;
 }
 #search {
 	width:250px;
@@ -1346,6 +1386,17 @@ footer .col-md-4.text-right a .glyphicon {
 		color:#103a9c;
 	}
 	
+	#home_main {
+		padding-left:5px;
+		padding-right:5px;	
+	}
+	
+	#home_main #top_ten .col-xs-6 {
+		padding-left:5px;
+		padding-right:5px;
+		margin-bottom:35px;
+	}
+	
 	#main_content {
 		margin-top:20px;	
 	}
@@ -1358,6 +1409,9 @@ footer .col-md-4.text-right a .glyphicon {
 	}
 	
 	/* Page Headers */
+	.page-header {
+		margin:0px -15px 10px;	
+	}
 	.page-header img {
 		margin:0px auto;	
 	}
@@ -1405,6 +1459,10 @@ footer .col-md-4.text-right a .glyphicon {
 	.dropdown-menu.multi-column {
 		min-width: 240px !important;
 		overflow-x: hidden;
+	}
+	/* Offer Layout */
+	.cbp-vm-view-grid ul#offers li {
+		max-width: 236px;
 	}
 	/* Product Media Queries */
 	.cbp-vm-view-list.product .cbp-vm-title {
