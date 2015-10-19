@@ -19,6 +19,21 @@ h1 {
 	font-size:1.571em;
 }
 
+.error {
+	color:#9c0000;	
+}
+
+.bold {
+	font-weight:bold;	
+}
+
+#skipnav {
+	position:absolute;
+	z-index:999999;	
+	background:white;
+	padding:5px;
+}
+
 #FR .btn-primary {
 	width:113px;
 	white-space:normal;
@@ -63,6 +78,10 @@ h1 {
 	text-overflow:ellipsis;
 	white-space:nowrap;
 	height:20px;	
+}
+
+#top_ten .retailer_name {
+	margin:0px auto;	
 }
 
 span.percent_amt {
@@ -147,6 +166,11 @@ a.offer-imageLink {
 	margin-bottom:30px;
 	color:#888888;
 }
+
+#FR #home_main span.percent_amt {
+	max-width:170px;
+	white-space:normal;
+}	
 
 /* Page Headings */
 
@@ -684,6 +708,10 @@ nav #navbar .input-group-btn {
 }
 
 @media (max-width: 768px) {
+.form-control.visible-xs {
+	font-size:16px;
+}
+	
 #hero {
 	height:568px;
 	padding-left:0px;
@@ -803,6 +831,11 @@ nav #navbar .input-group-btn {
 	color:#103a9c;
 }
 
+#hiw_home .learn_more {
+	font-size:.6em;	
+	float:right;
+}
+
 #hiw_home .col-md-4 {
 	margin-bottom:30px;
 }	
@@ -836,6 +869,10 @@ nav #navbar .input-group-btn {
 
 .hiw_section .panel-default>.panel-heading+.panel-collapse>.panel-body {
 	border:none;
+}
+
+#hiw_section h2 {
+	color:#103a9c;	
 }
 
 .faq-container .panel-title a:before {
@@ -896,6 +933,20 @@ div .toggle-handle {
 
 .btn-default.dropdown-toggle {
 	border-radius:0px;
+}
+
+.btn-group.results_filter.open .btn-default {
+	background-color:white !important;
+}
+
+.btn-group.results_filter.open .dropdown-menu {
+	left:inherit;
+	right:0px;
+	min-width:163px;
+}
+
+.btn-group.results_filter.open .dropdown-menu li a {
+	padding:5px 7px;	
 }
 
 /* View Mode Switch */
@@ -1030,6 +1081,10 @@ div .toggle-handle {
 	margin:7px 0px 33px;
 }
 
+.cbp-vm-view-grid ul#offers li .retailer_name {
+	margin:0px auto;	
+}
+
 .cbp-vm-view-grid .cbp-vm-details {
 	max-width: 300px;
 	min-height: 35px;
@@ -1134,6 +1189,15 @@ div .toggle-handle {
 	display:block;
 }
 
+@media screen and (max-width:1170px) {
+	#main_content {
+		overflow:hidden;
+	}	
+	.container {
+		width:100%;	
+	}
+}
+
 @media screen and (max-width: 66.7em) {
 	.cbp-vm-view-list .cbp-vm-details  {
 		width: 20%;
@@ -1148,17 +1212,39 @@ div .toggle-handle {
 }
 
 @media screen and (max-width: 47.375em) {
+	.cbp-vm-view-list ul#offers li {
+		height:142px;	
+	}
+	#FR .cbp-vm-view-list ul#offers li {
+		height:162px;	
+	}
 	.cbp-vm-view-list .cbp-vm-image {
-		width: 15%;
+		width: 50%;
 		vertical-align:top;
 	}
 
 	.cbp-vm-view-list .cbp-vm-title {
 		width: 25.5%;
+		padding:0px;
 	}
 	
 	.cbp-vm-view-list .cbp-vm-price {
-		xwidth:36.5%;
+		width:50%;
+		float:right;
+	}
+	
+	.cbp-vm-view-list .retailer_name {
+		max-width:145px;	
+	}
+	
+	.cbp-vm-view-list .btn-primary {
+		float:left;
+		margin-top:15px;	
+	}
+	
+	.cbp-vm-view-list .cbp-vm-price .currency {
+		display:block;	
+		xpadding:0px 10px;
 	}
 
 	.cbp-vm-view-list .cbp-vm-details  {
@@ -1280,7 +1366,6 @@ display: none;
 	-webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.35);
 	-moz-box-shadow:    0px 1px 5px 0px rgba(0, 0, 0, 0.35);
 	box-shadow:         0px 1px 5px 0px rgba(0, 0, 0, 0.35);
-	overflow:hidden;
 }
 
 div.main {
@@ -1428,13 +1513,22 @@ footer .col-md-4.text-right a .glyphicon {
 /* Navbar Queries */
 
 @media screen and (max-width:1079px) {
-	#FR nav .navbar-collapse ul {
-		display:none;	
+	#FR .navbar-default .container .row>.col-md-6 {
+		width:100% !important;	
 	}
-	#FR .navbar-toggle {
+	
+	#FR .typeahead {
+		display:block !important;
+	}
+	
+	#FR nav .navbar-collapse {
+		display:none !important;	
 	}
 	#FR .navbar-header {
 		xfloat:none;
+	}
+	#FR .navbar-header .form-group.col-xs-9 {
+		display:block !important;	
 	}
 	#FR .navbar-header {
 		background:#002888;
@@ -1444,7 +1538,7 @@ footer .col-md-4.text-right a .glyphicon {
 		border:none;
 		display:block;	
 	}
-	#FR .navbar-default .navbar-toggle:focus, #FR .navbar-default .navbar-toggle:hover {
+	#FR .navbar-default .navbar-toggle:focus, #EN .navbar-default .navbar-toggle:hover {
 		background:#002888;
 	}
 	#FR .navbar-default .navbar-toggle .icon-bar {
@@ -1459,6 +1553,9 @@ footer .col-md-4.text-right a .glyphicon {
 	}
 	#FR #logo {
 		float:none;	
+	}
+		#FR .cbp-vm-view-list .cbp-vm-price .currency {
+		display:block;	
 	}
 
 }
@@ -1496,6 +1593,7 @@ footer .col-md-4.text-right a .glyphicon {
 	#EN #logo {
 		float:none;	
 	}
+	
 }
 
 	
@@ -1517,6 +1615,7 @@ footer .col-md-4.text-right a .glyphicon {
 .page-header .cbp-vm-options {
 	margin-top:25px;
 	float:right;
+	width:40%;
 }
 #search {
 	width:250px;
@@ -1663,6 +1762,24 @@ footer .col-md-4.text-right a .glyphicon {
 		margin-top:15px;
 		float:left;	
 	}
+	#EN .col-xs-6.cbp-vm-options .results_filter #sort-by-text {
+		max-width:25px;
+		overflow:hidden;
+		white-space:nowrap;
+		text-overflow:ellipsis;
+		display:inline-block;
+		vertical-align:bottom;
+	}
+	
+	#FR .col-xs-6.cbp-vm-options .results_filter #sort-by-text {
+		max-width:140px;
+		overflow:hidden;
+		white-space:nowrap;
+		text-overflow:ellipsis;
+		display:inline-block;
+		vertical-align:bottom;
+	}
+	
 	.dropdown-menu.multi-column {
 		min-width: 240px !important;
 		overflow-x: hidden;
@@ -1677,50 +1794,17 @@ footer .col-md-4.text-right a .glyphicon {
 		max-width: 236px;
 	}
 	.cbp-vm-view-list .cbp-vm-image {
-		width:40%;	
+		xwidth:40%;	
 	}
 	
 	.cbp-vm-view-list .cbp-vm-title {
-		width:auto;	
+		width:47%;
+		margin-left:	-4px;
 	}
-	/* Product Media Queries */
-	.cbp-vm-view-list.product .cbp-vm-title {
-	width:70%;
-}
-	.cbp-vm-view-list #product_list .cbp-vm-image {
-		width:auto;
-	}
-	.cbp-vm-view-list #product_list .cbp-vm-title p {
-		margin-bottom:5px;
-	}
-
-	.cbp-vm-view-list #product_list .cbp-vm-price
-	 {
-		display:none;
-	}
-	.cbp-vm-view-list #product_list .list_mobile {
+	
+	.cbp-vm-view-list .cbp-vm-price .visible-xs .see_details {
 		display:block;
-	}
-	.cbp-vm-view-grid #product_list .list_mobile {
-		display:none;
-	}
-
-	.cbp-vm-view-list #product_list a.btn {
-		display:none;
-	}
-	.cbp-vm-view-list #product_list .cbp-vm-details a.btn {
-		display:inline-block;
-	}
-	.cbp-vm-view-list #product_list .cbp-vm-details {
-		padding-right:0px;
-	}
-	.cbp-vm-view-list #product_list .cbp-vm-details .offer_amt {
-		display:inline-block;
-		padding:0px 10px 0px 8px;
-	}
-	#product_list {
-		padding-left:0px;
-		padding-right:10px;
+		margin-top:18px;	
 	}
 	/* Offer Table - List */
 	
@@ -1877,10 +1961,16 @@ footer .dropdown .dropdown-menu li {
 @media screen and  (max-width:440px) {
 	.cbp-vm-view-list .cbp-vm-price {
 		display:block;
+		white-space:normal;
 	}
 	
 	.toggle.ios {
 		max-width: 135px;	
 	}
 
+}
+@media screen and (max-width:374px) {
+	#EN .col-xs-6.cbp-vm-options .results_filter #sort-by-text {
+		display:none;
+	}	
 }
