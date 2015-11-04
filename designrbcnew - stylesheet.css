@@ -820,8 +820,8 @@ nav #navbar .input-group-btn {
 	height: 0;
 	border-left: 20px solid transparent;
 	border-right: 20px solid transparent;
-	border-top: 20px solid yellow;
-	margin-top:50px;
+	border-top: 20px solid #FEDF01;
+	margin-top:44px;
 }
 
 /* Home HIW */
@@ -1216,7 +1216,7 @@ div .toggle-handle {
 		height:142px;	
 	}
 	#FR .cbp-vm-view-list ul#offers li {
-		height:162px;	
+		height:195px;	
 	}
 	.cbp-vm-view-list .cbp-vm-image {
 		width: 50%;
@@ -1298,6 +1298,11 @@ display: none;
 .modal-body span.currency {
 	display:block;
 	margin-top:15px;	
+}
+
+.modal-body .media-left img {
+	max-width:120px;
+	max-height:60px;	
 }
 
 .modal-body .btn-primary {
@@ -1797,10 +1802,6 @@ footer .col-md-4.text-right a .glyphicon {
 		xwidth:40%;	
 	}
 	
-	.cbp-vm-view-list .cbp-vm-title {
-		width:47%;
-		margin-left:	-4px;
-	}
 	
 	.cbp-vm-view-list .cbp-vm-price .visible-xs .see_details {
 		display:block;
@@ -1956,6 +1957,13 @@ footer .dropdown .dropdown-menu li {
 	margin-bottom:15px;	
 }
 
+}
+
+@media screen and (max-width:758px {
+	.cbp-vm-view-list .cbp-vm-title {
+		width:47%;
+		margin-left:	-4px;
+	}	
 }
 
 @media screen and  (max-width:440px) {
