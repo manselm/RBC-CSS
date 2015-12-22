@@ -4,6 +4,7 @@
 body {
   padding-top: 124px;
   font-family:Verdana, sans-serif;
+  padding-right:0px !important;
 }
 
 a {

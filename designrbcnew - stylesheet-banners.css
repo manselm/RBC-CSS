@@ -8,7 +8,7 @@
 .pauseplay {
 	position:relative;
 	bottom:27px;	
-	z-index:99999;
+	z-index:99;
 	width:15px;
 	height:18px;
 	float:left;
@@ -347,6 +347,11 @@
 #hero ul li>img.hidden-xs {
 	display:none;	
 }
+
+#hero .container .retailer_banner {
+	width:100% !important;
+}
+
 #hero ul li>img.visible-xs {
 	display:block !important;	
 }
